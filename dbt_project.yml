@@ -36,4 +36,6 @@ models:
       +materialized: table
     dim:
       +materialized: table
+    mart:
+      +materialized: table
      
