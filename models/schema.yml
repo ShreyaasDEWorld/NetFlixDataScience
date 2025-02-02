@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_Netflix
+    description: "Clean Netflix Data"
+    columns:
+      - name: show_id
+        description: "Unique identifier for the show"
+        tests:
+          - unique
+          - not_null
+    columns: 
+      - name: type
+        description: "Type of the show (movie or TV show)" 
+        tests:
+          - accepted_values: 
+              values: ['Movie','TV Show']     
