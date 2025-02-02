@@ -4,7 +4,8 @@ AS
 (
     select show_id,
     unnest(string_to_array(director, ', ')) AS director
-    from raw."src_NetflixSource"
+    --from raw."src_NetflixSource"
+    from {{ ref('src_NetflixSource')}}
 
 )
 
