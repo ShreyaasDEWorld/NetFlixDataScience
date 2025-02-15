@@ -2,8 +2,8 @@
 with Netflixbase as (
     select * 
     ,row_number() over (partition by title,type order by show_id) as rnk
-    --from  raw."src_NetflixSource" -- Correct reference to the source
-    from {{ ref('src_NetflixSource')}}
+    from  raw."src_NetflixSource" -- Correct reference to the source
+   
 )
 
 select 
